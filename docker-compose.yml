@@ -1,19 +1,22 @@
-version: '3'
+version: '3.4'
 
 services:
-  compose-nginx-rtmp:
+  compose-nginx-rtmps:
     build:
       context: .
       dockerfile: ./nginx/Dockerfile
   # network_mode: host
     restart: unless-stopped
-    image: compose-nginx-rtmp
+    image: compose-nginx-rtmps
+    env_file:
+      - ./.envs/.nginx
     ports:
       - 1935:1935
-   #   - 80:80
-   #   - 443:443
+      - 80:80
+      - 443:443
       - 19350:19350
       - 33722:33722
+    command: /start
   #  volumes:
   #    - ./certs:/opt/certs
    # networks:
