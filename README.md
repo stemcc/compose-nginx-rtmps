@@ -1,10 +1,36 @@
-[![Deploy](https://github.com/tiangolo/nginx-rtmp-docker/workflows/Deploy/badge.svg)](https://github.com/tiangolo/nginx-rtmp-docker/actions?query=workflow%3ADeploy)
+## compose-nginx-rtmps
+This is a loose fork of nginx-rtmp-docker and [nginx-rtmps](https://github.com/thiagoeolima/nginx-rtmps) which is itself a fork of nginx-rtmp. The purpose of this repository is primarily for testing various nginx streaming setups using docker compose.
 
-## Supported tags and respective `Dockerfile` links
+It uses stunnel4 inside the same container running nginx (using the same container right now for the sake of simplicity, in future versions it should probably be seperated into its own service, or better yet, removed entirely.)
 
-* [`latest` _(Dockerfile)_](https://github.com/tiangolo/nginx-rtmp-docker/blob/master/Dockerfile)
+## How to use
 
-**Note**: Note: There are [tags for each build date](https://hub.docker.com/r/tiangolo/nginx-rtmp/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `tiangolo/nginx-rtmp:latest-2020-08-16`.
+* Add your stream keys to the example environment file `.nginx.env` and uncomment the lines with keys.
+* Once you have added your keys, rename `.nginx.env` to `.nginx`.
+* Then run docker compose like normal, for example:
+
+```bash
+docker-compose up --build
+```
+
+
+
+
+### References
+
+https://github.com/peterhavener/nginx-rtmp-stunnel-docker
+
+https://github.com/thiagoeolima/nginx-rtmps
+
+https://dev.to/lax/rtmps-relay-with-stunnel-12d3
+
+https://serverfault.com/questions/1019317/receiving-rtmps-stream-on-nginx-rtmp
+
+https://github.com/arut/nginx-rtmp-module/issues/457#issuecomment-54084830
+
+https://sites.google.com/view/facebook-rtmp-to-rtmps/home
+
+https://charlesreid1.com/wiki/Stunnel/Docker#Set_up_client
 
 # nginx-rtmp
 
@@ -24,13 +50,6 @@ The main purpose (and test case) to build it was to allow streaming from [**OBS 
 
 ## Details
 
-## How to use
-
-* For the simplest case, just run a container with this image:
-
-```bash
-docker run -d -p 1935:1935 --name nginx-rtmp tiangolo/nginx-rtmp
-```
 
 ## How to test with OBS Studio and VLC
 
@@ -104,8 +123,7 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 ## Latest Changes
 
-* Add CI with GitHub actions. PR [#15](https://github.com/tiangolo/nginx-rtmp-docker/pull/15).
-* Upgrade Nginx to version 1.18.0. PR [#13](https://github.com/tiangolo/nginx-rtmp-docker/pull/13) by [@Nathanael-Mtd](https://github.com/Nathanael-Mtd).
+* Add compose file, periscope and twitch variables to environment files
 
 ## License
 
