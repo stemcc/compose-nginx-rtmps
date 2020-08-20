@@ -19,12 +19,14 @@ rtmp {
             live on;
             record off;
             allow play all;
-
+            # TODO: move IP addresses that can publish streams to env variables
             allow publish 104.35.227.189;
             allow publish 127.0.0.1;
-            #allow publish all;
 
             #periscope
+            #twitch
+            #facebook
+            #instagram
 
         }
     }

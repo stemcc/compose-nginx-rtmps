@@ -2,16 +2,20 @@
 PERISCOPE_URL=rtmp://127.0.0.1:19350/x/
 PERISCOPE_KEY=rcndj1ths184
 
+#Twitch
+TWITCH_URL=rtmp://live-lax.twitch.tv/app/
+TWITCH_KEY=live_530892755_y6zVtD1u78KfSIG1vysXNt2FO5j0Il
+
 #Youtube
 YOUTUBE_URL=rtmp://a.rtmp.youtube.com/live2/
-YOUTUBE_KEY=""
+#YOUTUBE_KEY=""
 
 #Facebook
 FACEBOOK_URL=rtmp://127.0.0.1:19351/rtmp/
-FACEBOOK_KEY=""
+#FACEBOOK_KEY=""
 
 #Instagram
 INSTAGRAM_URL=rtmp://127.0.0.1:19352/rtmp/
-INSTAGRAM_KEY=""
+#INSTAGRAM_KEY=""
 
 DEBUG=""
