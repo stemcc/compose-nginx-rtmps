@@ -3,4 +3,5 @@ certs/laughboss.com.key
 certs/*
 .envs/.nginx
 .envs/.nginx
-.github/
+.github
+.github/*
