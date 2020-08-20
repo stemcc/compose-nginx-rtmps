@@ -7,6 +7,7 @@ It uses stunnel4 inside the same container running nginx (using the same contain
 
 * Add your stream keys to the example environment file `.nginx.env` and uncomment the lines with keys.
 * Once you have added your keys, rename `.nginx.env` to `.nginx`.
+* Change the allowed publish IPs in `.nginx.conf` and `nginx.conf.template` to the IP addresses you're broadcasting from
 * Then run docker compose like normal, for example:
 
 ```bash
