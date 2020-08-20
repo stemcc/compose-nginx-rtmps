@@ -12,6 +12,14 @@ It uses stunnel4 inside the same container running nginx (using the same contain
 ```bash
 docker-compose up --build
 ```
+### How it works
+
+```
+source RTMP | nginx | rtmp public endpoints
+                    | rtmp local endpoints | stunnel | rtmps public endpoints
+
+
+```
 
 
 
