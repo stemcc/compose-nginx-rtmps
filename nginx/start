@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+# start stunnel and nginx in the foreground
+stunnel /etc/stunnel/stunnel.conf && nginx -g 'daemon off;'
