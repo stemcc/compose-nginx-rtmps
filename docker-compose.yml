@@ -17,8 +17,6 @@ services:
       - 19350:19350
       - 33722:33722
     command: /start
-  #  volumes:
-  #    - ./certs:/opt/certs
    # networks:
    #   - nginx-rtmp-backend
 
