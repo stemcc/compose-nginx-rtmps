@@ -1,4 +1,5 @@
 certs/laughboss.com.crt
 certs/laughboss.com.key
 certs/*
-.envs/.nginx.env
+.envs/.nginx
+.envs/.nginx
