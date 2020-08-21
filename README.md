@@ -1,7 +1,7 @@
 ## compose-nginx-rtmps
 This is a loose fork of nginx-rtmp-docker and [nginx-rtmps](https://github.com/thiagoeolima/nginx-rtmps) which is itself a fork of nginx-rtmp. The purpose of this repository is primarily for testing various nginx streaming setups using docker compose.
 
-It uses stunnel4 inside the same container running nginx (using the same container right now for the sake of simplicity, in future versions it should probably be seperated into its own service, or better yet, removed entirely.)
+It uses stunnel4 inside the same container running nginx (using the same container right now for the sake of simplicity, in future versions it should probably be seperated into its own service, or better yet, removed entirely in lieu of using nginx's stream directive).
 
 ## How to use
 
